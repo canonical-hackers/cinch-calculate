@@ -6,7 +6,7 @@ require 'cinch/plugins/calculate/version'
 Gem::Specification.new do |gem|
   gem.name          = "cinch-calculate"
   gem.version       = Cinch::Plugins::Calculate::VERSION
-  gem.authors       = ["Brian Haberer"]
+  gem.authors       = ["Brian Haberer", "Paul Visscher"]
   gem.email         = ["bhaberer@gmail.com"]
   gem.description   = %q{Cinch Plugin to alow users to pass mathematical problems to the bot for evaluation}
   gem.summary       = %q{Cinch Plugin for Math}
