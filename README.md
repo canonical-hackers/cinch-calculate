@@ -1,6 +1,6 @@
-# Cinch::Calculate
+# Cinch::Plugins::Calculate
 
-TODO: Write a gem description
+Plugin that alows users to find the answers to math problems.
 
 ## Installation
 
@@ -18,7 +18,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just add the plugin to your list:
+
+    @bot = Cinch::Bot.new do
+      configure do |c|
+        c.plugins.plugins = [Cinch::Plugins::Calculate]
+      end
+    end
+
+You will also need to have GNU Units installed. The Units binary that
+ships with OSX is old and doesn't work. If you have units installed
+some place that's not '/usr/bin/units' you will have to specify the
+alternate location.
+
+    c.plugins.options[Cinch::Plugins::Calculate][:units_path] = '/usr/bin/gunits'
+
+Once that's all done, just use .math in the channel.
 
 ## Contributing
 

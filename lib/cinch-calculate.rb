@@ -1,7 +1,2 @@
-require "cinch-calculate/version"
-
-module Cinch
-  module Calculate
-    # Your code goes here...
-  end
-end
+require 'cinch/plugins/calculate/version'
+require 'cinch/plugins/calculate/calculate'
