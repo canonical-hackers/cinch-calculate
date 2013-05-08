@@ -35,6 +35,12 @@ alternate location.
 
 Once that's all done, just use .math in the channel.
 
+    17:31 <@xentrac> .math 1000 W/m^2 * pi * earthradius^2
+    17:31 < marvin> xentrac: 1.2751652e+17 kg m^2 / s^3
+    17:31 <@xentrac> .math (1000 W/m^2 * pi * earthradius^2) / (quadrillion btu / year)
+    17:31 < marvin> xentrac: 3814043.9
+
+
 ## Contributing
 
 1. Fork it
