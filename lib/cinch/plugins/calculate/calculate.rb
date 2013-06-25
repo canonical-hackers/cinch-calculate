@@ -1,3 +1,5 @@
+require 'cinch'
+
 module Cinch::Plugins
   class Calculate
     include Cinch::Plugin
