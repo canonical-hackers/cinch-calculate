@@ -1,10 +1,10 @@
 # Cinch::Plugins::Calculate
 
 [![Gem Version](https://badge.fury.io/rb/cinch-calculate.png)](http://badge.fury.io/rb/cinch-calculate)
-[![Dependency Status](https://gemnasium.com/bhaberer/cinch-calculate.png)](https://gemnasium.com/bhaberer/cinch-calculate)
-[![Build Status](https://travis-ci.org/bhaberer/cinch-calculate.png?branch=master)](https://travis-ci.org/bhaberer/cinch-calculate)
-[![Coverage Status](https://coveralls.io/repos/bhaberer/cinch-calculate/badge.png?branch=master)](https://coveralls.io/r/bhaberer/cinch-calculate?branch=master)
-[![Code Climate](https://codeclimate.com/github/bhaberer/cinch-calculate.png)](https://codeclimate.com/github/bhaberer/cinch-calculate)
+[![Dependency Status](https://gemnasium.com/canonical-hackers/cinch-calculate.png)](https://gemnasium.com/canonical-hackers/cinch-calculate)
+[![Build Status](https://travis-ci.org/canonical-hackers/cinch-calculate.png?branch=master)](https://travis-ci.org/canonical-hackers/cinch-calculate)
+[![Coverage Status](https://coveralls.io/repos/canonical-hackers/cinch-calculate/badge.png?branch=master)](https://coveralls.io/r/canonical-hackers/cinch-calculate?branch=master)
+[![Code Climate](https://codeclimate.com/github/canonical-hackers/cinch-calculate.png)](https://codeclimate.com/github/canonical-hackers/cinch-calculate)
 
 Plugin that alows users to find the answers to math problems.
 
