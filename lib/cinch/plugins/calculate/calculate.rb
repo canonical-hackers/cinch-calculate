@@ -21,10 +21,7 @@ module Cinch::Plugins
 
     def math(problem_string)
       return 'Sorry, I can\'t do that' unless units_binary_exists?
-
-      units_output = IO.popen([@units_path, "-t", problem_string])
-
-      return units_output.readline.chomp!
+      return IO.popen([@units_path, "-t", problem_string]).readline
     rescue EOFError
       # If you don't have GNU Units installed you will get this error.
       debug "Your copy of Units did not produce useful output."
