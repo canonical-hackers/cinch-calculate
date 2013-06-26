@@ -23,10 +23,7 @@ module Cinch::Plugins
       return 'Sorry, I can\'t do that' unless units_binary_exists?
       return IO.popen([@units_path, "-t", problem_string]).readline
     rescue EOFError
-      # If you don't have GNU Units installed you will get this error.
-      debug "Your copy of Units did not produce useful output."
       debug "Make sure you have GNU Units installed and not the BSD Units that ships with OSX."
-      return 'Sorry, I can\'t do that'
     end
 
     def units_binary_exists?
