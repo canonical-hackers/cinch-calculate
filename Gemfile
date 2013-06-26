@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'cinch-test', :path => '~/src/cinch-test'
+gem 'cinch-test', :git => 'git://github.com/jayferd/cinch-test'
 # Specify your gem's dependencies in cinch-calculate.gemspec
 gemspec
