@@ -3,7 +3,7 @@ module Cinch
   module Plugins
     # Versioning info
     class Calculate
-      VERSION = '1.0.3'
+      VERSION = '1.0.4'
     end
   end
 end

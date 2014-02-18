@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 require 'cinch'
+require 'cinch/cooldown'
 
 module Cinch::Plugins
   # Cinch plugin to allow complex math calculations to be done.
@@ -8,6 +9,8 @@ module Cinch::Plugins
 
     self.help = 'Use .math <problem> to do math computations.' +
                 '(e.g. 5 feet / inches, .math sin(2) + 4)'
+
+    enforce_cooldown
 
     match /math (.+)/
 
