@@ -24,7 +24,7 @@ module Cinch::Plugins
 
     def math(problem_string)
       return 'Sorry, I can\'t do that' unless units_binary_exists?
-      return IO.popen([@units_path, '-t', problem_string]).readline.chomp
+      return IO.popen([@units_path, "-t", problem_string]).readline.chomp
     rescue EOFError
       debug 'Make sure you have GNU Units installed ' +
             'and not the BSD Units that ships with OSX.'
