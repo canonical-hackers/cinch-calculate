@@ -5,20 +5,20 @@ describe Cinch::Plugins::Calculate do
   include Cinch::Test
 
   before(:each) do
-    @bot = make_bot(Cinch::Plugins::Calculate)
+    opts = ENV.key?('UNITS_PATH') ? { :units_path => ENV['UNITS_PATH'] } : {}
+    @bot = make_bot(Cinch::Plugins::Calculate, opts)
   end
 
   describe 'configuration' do
-    it 'should handle units binary not existing gracefully' do
+    it 'handles units binary not existing gracefully' do
       bot = make_bot(Cinch::Plugins::Calculate, { units_path: '/usr/baddir/units' })
-      reply = get_replies(make_message(bot, '!math 2 + 2')).last
-      expect(reply.text).to eq('test: Sorry, I can\'t do that')
+      reply = get_replies(make_message(bot, '!math 2 + 2')).last.text
+      expect(reply).to eq('test: Sorry, I can\'t do that')
     end
   end
 
-  it 'should allow basic math' do
-    message = get_replies(make_message(@bot, '!math 2 + 2')).last
-    expect(message.text)
-      .to eq('test: 4')
+  it 'allows basic math' do
+    message = get_replies(make_message(@bot, '!math 2 + 2')).last.text
+    expect(message).to eq('test: 4')
   end
 end

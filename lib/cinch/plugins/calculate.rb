@@ -32,6 +32,7 @@ module Cinch
       rescue EOFError
         debug 'Make sure you have GNU Units installed ' \
               'and not the BSD Units that ships with OSX.'
+        return 'Sorry, I can\'t do that'
       end
 
       def units_binary_exists?

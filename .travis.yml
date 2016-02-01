@@ -1,8 +1,19 @@
 language: ruby
+sudo: required
+addons:
+  code_climate:
+    repo_token: 7fa783034a6c061451765c7029673a4f1015719946435818b2a39cf4fc693070
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install units
+  - gem update --system
+  - gem update bundler
 env:
   global:
     - "JRUBY_OPTS=-Xcext.enabled=true"
 rvm:
+  - 2.3.0
+  - 2.2.0
   - 2.1.0
   - 2.0.0
   - 1.9.3
@@ -15,11 +26,13 @@ rvm:
   - ree
 matrix:
   allow_failures:
+    - rvm: 1.9.3
+    - rvm: 1.9.2
+    - rvm: 1.8.7
     - rvm: 1.8.7
     - rvm: ree
     - rvm: jruby-18mode
     - rvm: jruby-19mode
     - rvm: jruby-head
+    - rvm: ruby-head
   fast_finish: true
-before_install:
- - sudo apt-get install units
